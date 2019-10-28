@@ -9,7 +9,9 @@
         "passport",
         "boilerplate"
     ],
+
     "license": "MIT",
+    "version": "1.0.0",
     "require": {
         "php": "^7.3.7",
         "akaunting/firewall": "^1.1",
