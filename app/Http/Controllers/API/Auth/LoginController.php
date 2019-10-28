@@ -17,32 +17,6 @@ use Symfony\Component\HttpFoundation\Response;
 class LoginController extends Controller
 {
 
-
-    /**
-     * @param $user
-     *
-     * @return JsonResponse
-     *
-     * TODO: after sms api
-     */
-    public function authenticated($user)
-    {
-
-        if (!$user->verified_by_email) {
-
-            return response()->json([
-                'warning' => true,
-                'message' => 'You need to confirm your account. We have sent you an activation Email, please check.'
-            ]);
-        }
-
-        return response()->json([
-            'warning' => false,
-            'message' => 'Email Already activated.'
-        ]);
-
-    }
-
     /**
      * @param LoginRequest $request
      *
@@ -67,7 +41,7 @@ class LoginController extends Controller
         $remember_me = $request->has('remember_me') ? true : false;
 
         if (auth()->attempt($credentials, $remember_me)) {
-            $token = auth()->user()->createToken('rentable-web')->accessToken;
+            $token = auth()->user()->createToken('my-api-token')->accessToken;
             $user = User::where('email', $request->email)->with('roles')->first();
 
             if ($remember_me === true) {

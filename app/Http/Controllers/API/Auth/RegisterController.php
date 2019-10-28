@@ -43,11 +43,10 @@ class RegisterController extends Controller
 
             ]);
 
-            $token = $user->createToken('rentable-web')->accessToken;
+            $token = $user->createToken('api-token')->accessToken;
             VerifyUser::create([
                 'user_id' => $user->id,
-                'email_token' => sha1(time()) . Str::random(40),
-                'sms_token' => $this->generateCode()
+                'email_token' => sha1(time()) . Str::random(40)
             ]);
             return response()->json([
                 'data' => [

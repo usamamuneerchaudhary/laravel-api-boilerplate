@@ -12,6 +12,7 @@ use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class ResetPasswordController extends Controller
 {
@@ -34,7 +35,7 @@ class ResetPasswordController extends Controller
             ['email' => $user->email],
             [
                 'email' => $user->email,
-                'token' => sha1(time()) . str_random(60),
+                'token' => sha1(time()) . Str::random(60),
             ]
         );
         if ($user && $passwordReset) {

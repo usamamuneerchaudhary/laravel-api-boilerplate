@@ -17,7 +17,6 @@ class CreateVerifyUsersTable extends Migration {
 			$table->string( 'email_token' );
 			$table->string( 'sms_token' );
 			$table->boolean( 'email_token_used' )->default( false );
-			$table->boolean( 'sms_token_used' )->default( false );
 			$table->timestamps();
 		} );
 	}
