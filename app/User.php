@@ -21,7 +21,6 @@ class User extends Authenticatable
         'first_name',
         'last_name',
         'email',
-        'phone_number',
         'password',
     ];
 
@@ -46,15 +45,6 @@ class User extends Authenticatable
 
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     * User can have an area
-     */
-    public function area()
-    {
-        return $this->belongsTo(Area::class);
-    }
-
-    /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function verifyUser()
@@ -62,14 +52,4 @@ class User extends Authenticatable
         return $this->hasOne(VerifyUser::class);
     }
 
-    public function agreements()
-    {
-        return $this->hasMany(LicenseAgreement::class);
-    }
-
-    public function listings()
-    {
-        return $this->hasMany(Listing::class);
-
-    }
 }
