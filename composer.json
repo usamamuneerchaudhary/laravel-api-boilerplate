@@ -10,6 +10,13 @@
         "boilerplate"
     ],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Usama Muneer",
+            "email": "usama@thewebtier.com"
+        }
+    ],
+    "minimum-stability": "stable",
     "require": {
         "php": "^7.3.7",
         "akaunting/firewall": "^1.1",
@@ -52,7 +59,6 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": [
