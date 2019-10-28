@@ -28,12 +28,6 @@
         "nunomaduro/collision": "^3.0",
         "phpunit/phpunit": "^7.5"
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./nova"
-        }
-    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",

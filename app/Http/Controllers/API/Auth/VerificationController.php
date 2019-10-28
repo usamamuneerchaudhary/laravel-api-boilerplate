@@ -12,9 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class VerificationController extends Controller
 {
-
-
-
+    
     /**
      * @param $token
      *
@@ -48,5 +46,5 @@ class VerificationController extends Controller
             ], Response::HTTP_ACCEPTED);
         }
     }
-    
+
 }
