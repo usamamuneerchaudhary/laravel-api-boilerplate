@@ -62,6 +62,9 @@ We're using [akaunting/firewall
 
 Simpler way of assigning Roles & Permissions to Users. You can more details on what we've done here on  [usamamuneerchaudhary/roles-permissions](https://github.com/usamamuneerchaudhary/roles-permissions) 
 
+### CRUD Scaffolding
+A Simple [CRUD Scaffolding package](https://github.com/JunaidQadirB/laravel-crud-scaffold) is being setup out of the box to keep you going without any hassle. 
+
 ## Creating Endpoints
 
 You can create your endpoints in `routes/api.php` under `auth:api` middleware group. 
