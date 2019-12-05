@@ -1,71 +1,71 @@
 {
-    "name": "usamamuneerchaudhary/laravel-api-boilerplate",
-    "type": "project",
-    "description": "Simple Laravel API Boilerplate to create a ready-to-use REST API using Laravel Passport",
-    "keywords": [
-        "framework",
-        "laravel",
-        "api",
-        "passport",
-        "boilerplate"
-    ],
-
-    "license": "MIT",
-    "version": "1.0.0",
-    "require": {
-        "php": "^7.3.7",
-        "akaunting/firewall": "^1.1",
-        "barryvdh/laravel-cors": "^0.11.3",
-        "facade/ignition": "^1.11",
-        "fideloper/proxy": "^4.0",
-        "laravel/framework": "^6.0",
-        "laravel/passport": "^7.4",
-        "laravel/tinker": "^1.0"
-    },
-    "require-dev": {
-        "beyondcode/laravel-dump-server": "^1.0",
-        "barryvdh/laravel-debugbar": "^3.2",
-        "fzaninotto/faker": "^1.4",
-        "mockery/mockery": "^1.0",
-        "nunomaduro/collision": "^3.0",
-        "phpunit/phpunit": "^7.5"
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "dont-discover": []
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "App\\": "app/"
-        },
-        "classmap": [
-            "database/seeds",
-            "database/factories"
-        ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "scripts": {
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
-        ],
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
-        ]
+  "name": "usamamuneerchaudhary/laravel-api-boilerplate",
+  "type": "project",
+  "description": "Simple Laravel API Boilerplate to create a ready-to-use REST API using Laravel Passport",
+  "keywords": [
+    "framework",
+    "laravel",
+    "api",
+    "passport",
+    "boilerplate"
+  ],
+  "license": "MIT",
+  "version": "1.0.0",
+  "require": {
+    "php": "^7.3.7",
+    "akaunting/firewall": "^1.1",
+    "barryvdh/laravel-cors": "^0.11.3",
+    "facade/ignition": "^1.11",
+    "fideloper/proxy": "^4.0",
+    "laravel/framework": "^6.0",
+    "laravel/passport": "^7.4",
+    "laravel/tinker": "^1.0",
+    "moonbear/laravel-crud-scaffold": "^1.5"
+  },
+  "require-dev": {
+    "beyondcode/laravel-dump-server": "^1.0",
+    "barryvdh/laravel-debugbar": "^3.2",
+    "fzaninotto/faker": "^1.4",
+    "mockery/mockery": "^1.0",
+    "nunomaduro/collision": "^3.0",
+    "phpunit/phpunit": "^7.5"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "dont-discover": []
     }
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    },
+    "classmap": [
+      "database/seeds",
+      "database/factories"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan package:discover --ansi"
+    ],
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@php artisan key:generate --ansi"
+    ]
+  }
 }
