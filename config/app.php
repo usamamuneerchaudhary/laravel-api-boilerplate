@@ -165,8 +165,6 @@ return [
         /*
          * Package Service Providers...
          */
-
-        Barryvdh\Cors\ServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
         Akaunting\Firewall\Provider::class,
 
