@@ -10,7 +10,7 @@
     "boilerplate"
   ],
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.4.1",
   "require": {
     "php": "^7.3.7",
     "akaunting/firewall": "^1.2",
